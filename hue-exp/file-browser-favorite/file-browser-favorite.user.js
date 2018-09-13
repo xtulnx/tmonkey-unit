@@ -68,7 +68,7 @@ ul.jarFavDir span,ul.jarFavDir li {  margin-right:4px; } \
     // 加载，可以考虑使用 GM_getValue
     function jarHfLoad() {
         var a = apiHelper.getFromTotalStorage('fb', "jar_favorite", []);
-        return (Array.isArray(a))?a.filter(x = > x != null):[];
+        return (Array.isArray(a))?a.filter(x => x != null):[];
     }
 
     // 更新储存 或 可以换成 GM_setValue
@@ -116,7 +116,7 @@ ul.jarFavDir span,ul.jarFavDir li {  margin-right:4px; } \
 
         //  history.forEach(item => $('<li><a href="' + '#' + item + '">' + item + '</a></li>').appendTo(frag););
         var _st = [], _sn = 0, _sl = "", _blk = {};
-        history.forEach(p = > {
+        history.forEach(p => {
             while(_st.length > 0 && !p.startsWith(_sl)) _sl = _st.pop();
             $('<li>' + jarKit_breadcrumb(p, '', _st.length, _blk) + '</li>').appendTo(frag);
             _sl = p + (p.endsWith('/') ? '' : '/');
@@ -153,7 +153,7 @@ ul.jarFavDir span,ul.jarFavDir li {  margin-right:4px; } \
         var idx = his.indexOf(p);
         if (mark == undefined) mark = idx < 0;
         if (mark == idx < 0) {
-            if (idx < 0) his.unshift(p); else his = his.filter(x = > x != p);//.splice(idx,1);
+            if (idx < 0) his.unshift(p); else his = his.filter(x => x != p);//.splice(idx,1);
             jarHfSave(his);
         }
         jarHfRefresh();
@@ -191,7 +191,7 @@ ul.jarFavDir span,ul.jarFavDir li {  margin-right:4px; } \
         $('.jarFavCopy').on('click', function (e) {
             var files = viewModel.selectedFiles(), d;
             if (files.length == 0) d = viewModel.currentPath();
-            else d = files.map(p = > p.path
+            else d = files.map(p => p.path
         ).
             join('\n');
             GM_setClipboard(d, "text");
@@ -219,7 +219,7 @@ ul.jarFavDir span,ul.jarFavDir li {  margin-right:4px; } \
     viewModel.updateFileList = function () {
 
         // 重新格式化 "文件修改时间" ，需要时可以注释
-        if (arguments.length > 0 && Array.isArray(arguments[0])) arguments[0].forEach(f = > f.mtime = jarKit_dateFormat(new Date(f.mtime), 'yyyy/MM/dd hh:mm:ss'))
+        if (arguments.length > 0 && Array.isArray(arguments[0])) arguments[0].forEach(f => f.mtime = jarKit_dateFormat(new Date(f.mtime), 'yyyy/MM/dd hh:mm:ss'))
 
         originalUpdateFileList.apply(this, arguments);
 
