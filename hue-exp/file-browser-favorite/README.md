@@ -5,6 +5,10 @@
 
 最近刚好接触 [Tampermonkey](https://tampermonkey.net/) ，遂自行扩展一下。
 
+如果你已经安装了 Tampermonkey ，那么，可以 [点击这里](https://github.com/xtulnx/tmonkey-unit/raw/master/hue-exp/file-browser-favorite/file-browser-favorite.user.js) 直接安装这个扩展.
+
+Good Luck!
+
 ----
 
 示例:
@@ -16,6 +20,7 @@
 
 	* 支持 上级路径 跳转。配色就没有浪费太多精力了
 
+
 * 【文件列表】
 
    ![](help02.png)
@@ -25,4 +30,8 @@
 	* 列表中，可以【复制路径】，如果是文件，可以使用【直接下载】按钮
 		* 重新格式化了 文件修改时间，按 "yyyy-MM-dd hh:mm:ss" 格式；
 
+
+----
+
+jason.liao 2018.09.13
 
