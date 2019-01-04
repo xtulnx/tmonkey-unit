@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Hue file-browser favorite
 // @namespace    https://github.com/xtulnx/tmonkey-unit
-// @version      0.2.20180914.bata
+// @version      0.3.20190104.bata
 // @description  Hue 文件浏览器的自定义收藏夹
 // @author       jason.liao
 // @match        http://*/filebrowser/*
